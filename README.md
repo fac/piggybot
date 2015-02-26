@@ -1,4 +1,4 @@
-# Piggybot
+# PiggyBot
 
 ```
            ___
@@ -29,7 +29,7 @@
                           //__/   //___.--''`
 ```
 
-Piggybot was originally created during a FreeAgent Hack Days project in 2014. In February 2015, another Hack Days team decided to polish it off and put it live.
+PiggyBot was originally created during a FreeAgent Hack Days project in 2014. In February 2015, another Hack Days team decided to polish it off and put it live.
 
 We've only spent around 4 days on this so it's pretty rough and ready. There's a noticeable lack of tests for a start. Feel free to send us a pull request with improvements.
 
@@ -63,7 +63,7 @@ To run the Sinatra app:
 ruby server.rb
 ```
 
-You can then view Piggybot in your browser at http://localhost:4567.
+You can then view PiggyBot in your browser at http://localhost:4567.
 
 ## Email
 
