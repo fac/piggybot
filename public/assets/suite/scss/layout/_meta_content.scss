@@ -1,0 +1,11 @@
+#meta {
+  position: absolute;
+  top: 1em;
+  width: 95%;
+	@extend %clearfix;
+  @include break(lap) {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}

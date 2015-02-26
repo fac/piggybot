@@ -1,0 +1,84 @@
+@charset "UTF-8";
+// Styles to prop up rendering issues in Internet Explorer 8 or below
+
+.lt-ie8 {
+  img {
+    -ms-interpolation-mode: bicubic; // Make resized images not look like ass in IE7
+  }
+	ul,
+  ol {
+	  margin-left: 0
+	}
+	.button {
+	  filter:chroma(color=#000000); // Remove black border from input[type="submit"] in IE7
+	}
+  .dropdown_menu > li {
+    float: none !important;
+    width: auto;
+  }
+	input[type="submit"] {
+	  margin-right: 5px;
+	}
+	.span1 {
+	  width: 6.02%;
+	}
+	.span2 {
+	  width: 14.54%;
+	}
+	.span3 {
+	  width: 23.06%;
+	}
+	.span6 {
+	  width: 48.72%;
+	}
+	.col_7 {
+		.span1 {
+			width: 12.44%;
+		}
+		.span2 {
+		  width: 27.0833333%;
+		}
+		.span3 {
+		  width: 41.6666667%;
+		}
+		.span6 {
+		  width: 85.4166667%;
+		}
+	}
+	.col_5 {
+		.span1 {
+		  width: 18.3%;
+		}
+		.span2 {
+		  width: 38.75%;
+		}
+		.span3 {
+		  width: 59.1666667%;
+		}
+		.span4 {
+		  width: 79.5833333%;
+		}
+	}
+}
+
+.lt-ie9 {
+	.container {
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 960px;
+	}
+	.navbar_brand,
+	.navbar_nav li {
+	  float: left;
+	}
+	.separated li {
+	  display: block;
+	  float: left;
+	  margin: 0 0.571em 0 0; /* 8px */
+	}
+	.navbar_brand {
+	  display: block;
+	  float: left;
+	  margin: 0 2% 0 0;
+	}
+}

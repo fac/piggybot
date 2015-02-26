@@ -1,0 +1,9 @@
+a,
+a:active,
+a:visited {
+  color: $base_colour;
+  text-decoration: none;
+}
+a:hover {
+  color: $base_colour_dark;
+}

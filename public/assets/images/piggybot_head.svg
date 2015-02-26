@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 465.4 192.5" enable-background="new 0 0 465.4 192.5" xml:space="preserve">
+<g id="Ear__x5B_Right_x5D_">
+	<path fill="#EDB0BA" d="M429.4,115.6c27.3-23.4,7.1-88.8,34.5-109.9C452.8-5.3,363.2-1,338,24.2"/>
+	<path fill="#B37D8A" d="M429.4,115.6c27.3-23.4,7.1-88.8,34.5-109.9c-11-11-89.4,6.1-104.9,38.3"/>
+</g>
+<g id="Ear__x5B_Left_x5D_">
+	<path fill="#EDB0BA" d="M34.5,115.6C7.2,92.1,27.4,26.8,0,5.7C11-5.3,100.7-1,125.9,24.2"/>
+	<path fill="#B37D8A" d="M34.5,115.6C7.2,92.1,27.4,26.8,0,5.7c11-11,89.4,6.1,104.9,38.3"/>
+</g>
+<g id="Head">
+	<path fill="#F9D3DE" d="M0.2,192.5C0.2,69.4,104.4,6.3,232.8,6.3s232.6,63,232.6,186.2H0.2z"/>
+	<path fill="#EDB0BA" d="M232.8,6.5c-13.4,0-26.5,0.6-39.3,2c109.7,11.7,193.3,73.7,193.3,184h78.6C465.4,69.4,361.2,6.5,232.8,6.5z
+		"/>
+</g>
+<g id="Snout">
+	<ellipse fill="#EDB0BA" cx="238.3" cy="101.5" rx="59.5" ry="52.3"/>
+	<ellipse opacity="0.1" fill="#010202" cx="238.3" cy="121.5" rx="59.5" ry="52.3"/>
+	<ellipse fill="#F9D3DE" cx="238.3" cy="111.5" rx="59.5" ry="52.3"/>
+	<ellipse fill="#343434" cx="217.1" cy="111.5" rx="11.8" ry="16.5"/>
+	<ellipse fill="#343434" cx="257.5" cy="111.5" rx="11.8" ry="16.5"/>
+</g>
+<g id="Eye__x7B_right_x5D_">
+	<path fill="#010202" d="M321.4,71.8c-9,0-16.4,6.5-16.4,15.5s7.3,15.5,16.4,15.5c9,0,16.4-6.5,16.4-15.5S330.5,71.8,321.4,71.8z"/>
+	<circle fill="#FFFFFF" cx="328.4" cy="80.6" r="3.4"/>
+	<circle fill="#FFFFFF" cx="323.9" cy="86.1" r="1.7"/>
+</g>
+<g id="Eye__x5B_Left_x5D_">
+	<path fill="#010202" d="M155.4,71.8c-9,0-16.4,6.5-16.4,15.5s7.3,15.5,16.4,15.5s16.4-6.5,16.4-15.5S164.5,71.8,155.4,71.8z"/>
+	<circle fill="#FFFFFF" cx="162.4" cy="80.6" r="3.4"/>
+	<circle fill="#FFFFFF" cx="157.9" cy="86.1" r="1.7"/>
+</g>
+</svg>

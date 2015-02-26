@@ -1,0 +1,83 @@
+.clear {
+  clear: both;
+}
+.standalone {
+  margin: 1em !important;
+}
+.standalone_top {
+  margin-top: 1em !important;
+}
+.standalone_right {
+  margin-right: 1em !important;
+}
+.standalone_bottom {
+  margin-bottom: 1em !important;
+}
+.standalone_left {
+  margin-left: 1em !important;
+}
+.flush {
+  margin: 0 !important;
+}
+.flush_top {
+  margin-top: 0 !important;
+}
+.flush_right {
+  margin-right: 0 !important;
+}
+.flush_bottom {
+  margin-bottom: 0 !important;
+}
+.flush_left,
+dl.flush_left > dd {
+  margin-left: 0 !important;
+}
+.padded {
+  padding: 1em !important;
+}
+.padded_top {
+  padding-top: 1em !important;
+}
+.padded_right {
+  padding-right: 1em !important;
+}
+.padded_bottom {
+  padding-bottom: 1em !important;
+}
+.padded_left {
+  padding-left: 1em !important;
+}
+.bare,
+#content.bare {
+  padding: 0 !important;
+}
+.bare_top {
+  padding-top: 0 !important;
+}
+.bare_right {
+  padding-right: 0 !important;
+}
+.bare_bottom {
+  padding-bottom: 0 !important;
+}
+.bare_left,
+ol.bare_left > li,
+ul.bare_left > li,
+dl.bare_left > li {
+  padding-left: 0 !important;
+}
+.lightweight {
+  padding: 2em !important;
+}
+.welterweight {
+  padding: 3em !important;
+}
+.middleweight {
+  padding: 4em !important;
+}
+.heavyweight {
+  padding: 5em !important;
+}
+.superheavyweight {
+  padding: 6em !important;
+}

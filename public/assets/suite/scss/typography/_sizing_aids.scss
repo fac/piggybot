@@ -1,0 +1,27 @@
+.whispered {
+  @include whispered;
+}
+.restrained {
+  @include restrained;
+}
+.neutral {
+  @include neutral;
+}
+.confident {
+  @include confident;
+}
+.assertive {
+  @include assertive;
+}
+.outspoken {
+  @include outspoken;
+}
+.pushy {
+  @include pushy;
+}
+.domineering {
+  @include domineering;
+}
+.tyrannical {
+  @include tyrannical;
+}

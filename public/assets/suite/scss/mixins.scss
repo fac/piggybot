@@ -1,0 +1,305 @@
+// Text sizes
+@mixin h1 {
+  font: 300 #{$h1_size}/#{$h1_line_height} $base_font_stack;
+}
+@mixin h2 {
+  font: 300 #{$h2_size}/#{$h2_line_height} $base_font_stack;
+}
+@mixin h3 {
+  font: normal #{$h3_size}/#{$h3_line_height} $base_font_stack;
+}
+@mixin h4 {
+  font: normal #{$h4_size}/#{$h4_line_height} $base_font_stack;
+}
+@mixin h5 {
+  font: normal #{$h5_size}/#{$h5_line_height} $base_font_stack;
+}
+@mixin h6 {
+  font: normal #{$h6_size}/#{$h6_line_height} $base_font_stack;
+}
+
+@mixin whispered {
+	font-size: em(10, 14) !important;
+	line-height: em(14, 10) !important;
+}
+@mixin restrained {
+	font-size: em(12, 14) !important;
+	line-height: em(15, 12) !important;
+}
+@mixin neutral {
+	font-size: $em !important;
+	line-height: $base_line_height !important;
+}
+@mixin confident {
+	font-size: em(16, 14) !important;
+	line-height: em(24, 16) !important;
+}
+@mixin assertive {
+	font-size: em(18, 14) !important;
+	line-height: em(27, 18) !important;
+}
+@mixin outspoken {
+	font-size: em(21, 14) !important;
+	line-height: em(28, 21) !important;
+}
+@mixin pushy {
+	font-size: em(24, 14) !important;
+  font-weight: 300 !important;
+	line-height: em(28, 24) !important;
+}
+@mixin domineering {
+	font-size: em(28, 14) !important;
+  font-weight: 300 !important;
+	line-height: em(32, 28) !important;
+}
+@mixin tyrannical {
+	font-size: em(36, 14) !important;
+}
+
+// Depress on-click
+@mixin click_depressor {
+  outline: 0;
+  position: relative;
+  top: 1px;
+}
+
+// Border Radius
+@mixin border_radius($tl: 3px, $tr: 3px, $br: 3px, $bl: 3px) {
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+// Box shadow
+@mixin box_shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+// Rotate
+@mixin rotate($degree) {
+	-webkit-transform: rotate($degree);
+	-moz-transform: rotate($degree);
+	-ms-transform: rotate($degree);
+	-o-transform: rotate($degree);
+	transform: rotate($degree);
+}
+
+// Linear gradient
+// http://bourbon.io/docs/#linear-gradient
+@mixin linear_gradient($pos, $G1, $G2: null,
+                       $G3: null, $G4: null,
+                       $G5: null, $G6: null,
+                       $G7: null, $G8: null,
+                       $G9: null, $G10: null,
+                       $fallback: null) {
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1));
+  $pos-spec: null;
+  $pos-degree: null;
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
+    $G10: $G9; $G9: $G8; $G8: $G7; $G7: $G6; $G6: $G5;
+     $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
+     $pos: null;
+  }
+
+  @if $pos {
+    $positions: _linear-positions-parser($pos);
+    $pos-degree: nth($positions, 1);
+    $pos-spec:   nth($positions, 2);
+  }
+
+  $full: $G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10;
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1);
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == "transparent") {
+    $fallback-color: $fallback;
+  }
+
+  background-color: $fallback-color;
+  background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+  background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+}
+
+// Box sizing
+@mixin box_sizing ($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+// Clearfix
+@mixin clearfix {
+	%clearfix {
+	  *zoom: 1;
+
+		&:before,
+		&:after {
+		  content: " ";
+		  display: table;
+		}
+		&:after {
+		  clear: both;
+		}
+	}
+	.group {
+	  *zoom: 1;
+
+		&:before,
+		&:after {
+		  content: " ";
+		  display: table;
+		}
+		&:after {
+		  clear: both;
+		}
+	}
+}
+
+// Button
+@mixin button {
+  border-bottom: 1px solid #b2b2b2;
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  border-top: 1px solid #e5e5e5;
+  color: $base_colour;
+  display: inline-block;
+  font: bold 1em/110% $base_font_stack;
+  overflow: visible;
+  padding: 0.714em 1em;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  width: auto;
+	@include border_radius();
+	@include box_shadow(0, 1px, 0px, rgba(0,0,0,0.08));
+	@include linear_gradient(#fcfcfc, #eee);
+ 
+  &:hover,
+	&:focus {
+	  background: #f6f6f6;
+	  color: $base_colour_dark;
+	  outline: 0;
+	  text-decoration: none;
+  }
+ 
+  &:active {
+	  background: #f1f1f1;
+	  border-bottom: 1px solid #d4d4d4;
+	  outline: 0;
+	  position: relative;
+	  top: 1px;
+		@include box_shadow(0, 0, 0, rgba(0,0,0,0));
+  }
+	
+	&:hover span,
+	&:focus span,
+	&:active span {
+	  outline: 0;
+	}
+	
+	&[disabled="disabled"] {
+	  border-bottom: 1px solid #c5c5c5;
+		@include box_shadow(0, 1px, 0px, rgba(0,0,0,0.05));
+	}
+	
+	&[disabled="disabled"]:active {
+	  top: 0;
+	}
+	
+	&.obese {
+		@include confident;
+	  padding: 0.5em 1.25em;
+	}
+}
+
+@mixin button_cta_colours {
+  border-bottom: 1px solid #4b881d;
+  border-left: 1px solid #6cab3e;
+  border-right: 1px solid #6cab3e;
+  border-top: 1px solid #83AC2E;
+	@include linear_gradient(#7cc04a, #63a532);
+} 
+
+// Secondary navigation gradient
+@mixin secondary_nav_gradient {
+  background: -moz-linear-gradient(left,  $global_bg_darker 0%, $global_bg 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$global_bg_darker), color-stop(100%,$global_bg));
+  background: -webkit-linear-gradient(left,  $global_bg_darker 0%,$global_bg 100%);
+  background: -o-linear-gradient(left,  $global_bg_darker 0%,$global_bg 100%);
+  background: -ms-linear-gradient(left,  $global_bg_darker 0%,$global_bg 100%);
+  background: linear-gradient(to right,  $global_bg_darker 0%,$global_bg 100%);
+}
+
+// Form fields
+%form_field {
+  background: #fff;
+  border-color: #afafaf #d5d5d5 #ddd #d5d5d5;
+  border-style: solid;
+  border-width: 1px;
+  color: $base_text_colour;
+  font-family: $base_font_stack;
+  font-size: 1em;
+  max-width: 95%;
+  padding: 0.45em;
+  width: 20em;
+	@include border_radius(2px, 2px, 2px, 2px);
+	@include box_shadow(inset, 0, 1px, 1px, rgba(0,0,0,0.12));
+}
+
+// Disabled form fields
+%form_field_disabled {
+  background: #F7F8F8; /* Body type colour (#656E7D) reduced to 5% opacity on white */
+  color: #757980; /* Body type colour (#656E7D) reduced to 85% opacity on white and to 12% saturation */
+}
+
+// Disabled fieldset form fields
+%form_field_disabled_fieldset {
+  background: $global_bg;
+}
+
+// Read-only fields
+%form_field_read_only {
+  background: none;
+  border: 0;
+  padding: 0;
+	@include box_shadow(0, 0, 0, rgba(0,0,0,0));
+}
+
+// Auto-width inputs
+%form_field_auto_width {
+  width: auto;
+}
+
+// Media queries
+$supported: true !default; // make this stylesheet output media queries from our mixin — is set to false in application_ie.scss
+
+@mixin break($point, $support: $supported) {
+  @if $support == true {
+  
+    // output the mixin content inside of a media query
+    @if $point == palm {
+      @media (min-width: 600px) { @content; }
+    }
+    @else if $point == palm-large {
+      @media (min-width: 768px) { @content; }
+    }
+    @else if $point == lap {
+      @media (min-width: 1024px) { @content; }
+    }
+  } @else {
+    // output ALL the style content inside the mixin, without a media query
+    @content;
+  }
+}
+
+// Regular variables for media queries we want IE to ignore completely
+$up-to-palm-large: 768px;

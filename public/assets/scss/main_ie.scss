@@ -1,0 +1,8 @@
+// Styles for browsers that don't support media queries
+$supported: false;
+ 
+// Import styles from main Suite stylesheet
+@import "main";
+
+// Import IE fixes from main Suite stylesheet
+@import "../suite/scss/ie/_ie";

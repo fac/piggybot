@@ -1,0 +1,15 @@
+.widget {
+  background: #F2F2F4;
+  margin: 0 0 2em 0;
+  padding: 1em;
+	@include border_radius(4px, 4px, 4px, 4px);
+	@extend %clearfix;
+	
+	p:last-child {
+		margin-bottom: 0;
+	}
+	&.bare {
+	  background: none;
+		@include border_radius(0, 0, 0, 0);
+	}
+}

@@ -1,0 +1,96 @@
+.infobox {
+  background: #FAF7E0;
+  border-color: #E8E5CD #E0DDC2 #CBC9B0;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 0 50px rgba(240, 232, 173, 0.5) inset;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 0 50px rgba(240, 232, 173, 0.5) inset;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 0 50px rgba(240, 232, 173, 0.5) inset;
+  color: #635646;
+  line-height: 140%;
+  margin: 2em auto;
+  max-width: 50em;
+  padding: 1.5em 1.5em 1em 1.5em;
+  position: relative;
+  width: 100%;
+	@include border_radius();
+	@include box_sizing();
+	
+	&:before {
+	  content: image-url("suite/images/core/note_tape.png");
+	  margin-left: -64px; /* Half width of note_tape.png */
+	  left: 50%;
+	  position: absolute;
+	  top: -15px;
+	}
+	.title,
+	h2,
+	h3 {
+	  color: #463C2F;
+	  @include confident;
+	  font-weight: bold;
+	  margin-bottom: 0.5em;
+	  margin-top: 0;
+	}
+	p {
+	  margin-bottom: 0.5em;
+	}
+	.locked {
+	  background: image-url("suite/images/icons/locked_infobox.svg") no-repeat left center;
+	  padding-left: 17px;
+	}
+	.no_svg .locked {
+	  background-image: image-url("suite/images/icons/locked_infobox.png");
+	}
+}
+.loadingbox {
+	> *:first-child {
+	  background: image-url("suite/images/spinners/loadingbox.gif") no-repeat 0 center;
+	}
+	> *:first-child,
+	> *:first-child + .tip {
+	  padding-left: 22px;
+	}
+}
+.error {
+  background: #FDEAEA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fbdede #F9D6D6 #F4C3C3 #F9D6D6;
+  color: #675F5F;
+  margin: 0 0 1em 0;
+  padding: 1em;
+	
+	ul,
+	ol {
+	  margin-bottom: 0;
+	  padding-left: 0;
+	}
+	li,
+	h2 {
+	  color: #DD3333;
+	}
+	li {
+	  list-style: disc;
+	  margin: 0 0 0 20px;
+	  padding: 0;
+	}
+	h2 {
+	  @include confident;
+	  margin-bottom: 0.5em;
+	  margin-top: 0;
+	}
+	&.new {
+		h2 {
+		  margin-bottom: 0;
+		}
+		p {
+		  color: #DD3333;
+		  margin: 0 0 0.5em 0;
+		  width: auto;
+		}
+		.contact_support {
+		  @include restrained;
+		}
+	}
+}

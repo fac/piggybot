@@ -1,0 +1,58 @@
+.login_remember {
+  margin-bottom: 0;
+	
+	div {
+	  clear: none;
+	  float: left;
+	}
+	label {
+	  @include restrained;
+	  margin-bottom: 0;
+	}
+	input[type="checkbox"] {
+	  margin-left: 0.5em;
+	}
+	input[type="checkbox"],
+	input[type="checkbox"] + label {
+	  margin-top: 0.85em;
+	  vertical-align: middle;
+	}
+}
+#user_remember_me {
+  margin-left: 0.5em;
+}
+#user_remember_me + label,
+.login_remember input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+@include break(palm-large) {
+  #login_signup {
+    padding-top: 1em;
+  }
+  #login_form,
+  #create_account {
+    float: left;
+  }
+  #create_account {
+    padding: 0 4% 0 6%;
+    width: 39%;
+  }
+  #login_form {
+    border-right: 1px solid #dedede;
+    margin-bottom: 0;
+    padding: 0 9% 0 6%;
+    width: 34%;
+	
+  	label {
+      display: none;
+  	}
+  	.login_remember label {
+      display: inline-block;
+  	}
+  	input[type="email"],
+  	input[type="password"] {
+      width: 90%;
+  	}
+  }  
+}

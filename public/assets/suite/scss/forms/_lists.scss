@@ -1,0 +1,16 @@
+form {
+	ol,
+	ul {
+	  margin-left: 0;
+	  padding-left: 0;
+		
+		li {
+		  list-style: none;
+		  margin: 0 0 0.25em 0;
+		}
+	}
+}
+.faux_label + ol,
+.faux_label + ul {
+  margin-top: 0.5em;
+}

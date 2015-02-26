@@ -1,0 +1,61 @@
+h1 + .subtitle {
+  margin-top: -2em;
+}
+p {
+  margin: 0 0 1em 0;
+}
+.tagline {
+  margin: -1em 0 1.5em 0;
+}
+caption {
+  text-align: left;
+}
+em {
+  font-style: italic;
+}
+cite {
+  font-style: italic;
+}
+blockquote {
+  border-left: 4px solid $slate_grey;
+	font-size: em(18, 14);
+	line-height: em(27, 18);
+  margin: 0 0 0.5em 0;
+  padding-left: 1em;
+}
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted $slate_grey;
+  cursor: help;
+}
+sub,
+sup {
+  font-size: 100%;
+}
+pre,
+code,
+tt {
+  font-family: $monospaced;
+}
+table tt {
+  word-wrap: break-word;
+}
+pre {
+  background: #f5f5f5;
+  border-left: 4px solid $slate_grey;
+  overflow: auto;
+  padding: 1em;
+}
+code {
+  overflow: auto;
+  white-space: nowrap;
+  @include restrained;
+}
+pre code {
+  white-space: pre-line;
+  @include break(palm) {
+    white-space: pre;
+  }
+}

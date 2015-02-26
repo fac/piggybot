@@ -1,0 +1,90 @@
+#content {
+  background: #fff;
+  margin: 0 auto;
+  padding: 1em 1em 2em 1em;
+  position: relative;
+	@include box_shadow(0, 1px, 3px, rgba(0,0,0,0.16));
+	@extend %clearfix;
+  @include break(palm-large) {
+    clear: both;
+    padding: 2em;
+		@include border_radius(0, 0, 3px, 3px);
+  } 
+}
+.full_bleed #content {
+  padding-right: 0;
+  padding-left: 0;
+  @include break(palm-large) {
+    @include border_radius(0, 0, 0, 0);
+  }
+} 
+#main_content {
+  clear: both;
+}
+#content.meta #primary_content {
+	@extend %clearfix;
+}
+@include break(palm-large) {
+  .contents {
+    max-width: 70em; /* 980px at 14px */
+    padding: 0 2em;
+    position: relative;
+  }
+  .document .contents,
+  .full_bleed .contents {
+    margin: 0 auto;
+  }
+  
+  /* Overwritten in ie.css */
+  .document #content {
+    max-width: 66em; /* 912px at 14px */
+    width: 90%;
+  }
+  .document #content.meta {
+    max-width: 70em; /* 980px at 14px */
+  }
+  #content.meta {
+  	@include box_shadow(0, 1px, 3px, rgba(0,0,0,0.16));
+  	@include border_radius(0, 0, 3px, 3px);
+  }
+}
+@include break(lap) {
+  #meta {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  #content.meta {
+    background: none;
+    margin-top: 0;
+    padding-top: 0;
+    height: 100%;
+		
+		#primary_content {
+	    background: #fff;
+	    margin-right: 20em; /* 280px */
+	    margin-top: 0;
+	    padding: 2em;
+			@include border_radius(0, 0, 3px, 0);
+			@include box_shadow(0, 1px, 3px, rgba(0,0,0,0.20));
+		}
+  }
+  .document #content.meta #primary_content {
+		@include border_radius(0, 0, 3px, 3px);
+  }
+  #content.meta {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+		@include box_shadow(0, 0, 0, rgba(0,0,0,0));
+		@include border_radius(0, 0, 0, 0);
+		
+		#meta {
+	    float: right;
+	    margin-right: 2em; /* 28px */
+	    right: 0;
+	    top: 0;
+	    width: 18em; /* 252px */
+		}
+  }
+}

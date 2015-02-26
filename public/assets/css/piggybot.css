@@ -1,0 +1,347 @@
+@charset "@utf-8";
+/*
+  Title:  Master Stylesheet for PiggyBot™
+  Author: Derek Russell (derek@freeagent.com)
+*/
+
+/* KEYFRAME ANIMATIONS
+-------------------------------------------------- */
+@-webkit-keyframes chomp {
+  0% {
+    height: 40px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+
+@-moz-keyframes chomp {
+  0% {
+    height: 40px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+
+/* FONTS
+-------------------------------------------------- */
+@font-face {
+  font-family: Effra;
+  src: url('../fonts/Effra_Std_Rg.ttf') format('truetype');
+}
+
+/* FRAMEWORK
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  font-family: Effra, helvetica, arial, sans-serif;
+}
+body {
+  background: #e9e9e9;
+  font-size: 20px;
+}
+#wrapper {
+  margin: 60px auto;
+  text-align: center;
+  width: 928px;
+}
+a {
+  color: #007abf;
+  text-decoration: none;
+}
+p {
+  color: #616161;
+/*  font-size: 24px;
+*/}
+p.note {
+  color: #888;
+  font-size: 18px;
+}
+th.total,
+th.amount {
+  font-size: 30px;
+}
+th.amount {
+  text-align: right;
+}
+
+/* BACKGROUND IMAGES
+-------------------------------------------------- */
+.background_image {
+  position: absolute;
+  z-index: -1;
+}
+.background_image#machine_panel {
+  right: 50px;
+  top: 500px;
+}
+.background_image#machine_grill {
+  left: 50px;
+  top: 396px;
+}
+.background_image#machine_leds {
+  left: 60px;
+}
+
+/* HEADER
+-------------------------------------------------- */
+#head {
+  background: url(../images/piggybot_head.png) no-repeat;
+  display: block;
+  height: 156px;
+  margin: auto;
+  width: 928px;
+}
+#head #nose {
+  height: 125px;
+  margin: auto;
+  position: relative;
+  left: 6px;
+  top: 50px;
+  width: 120px;
+  z-index: 4;
+}
+
+/* PIGGYBOT - MOUTH (TOP)
+-------------------------------------------------- */
+#mouth_top {
+  background: url(../images/piggybot_mouth_top.png);
+  height: 60px;
+  padding-top: 9px;
+  width: 928px;
+}
+#mouth_top #teeth {
+  height: 40px;
+  margin: auto;
+  position: relative;
+  width: 846px;
+  z-index: 3;
+}
+#mouth_top #teeth .tooth {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 0 #ccc;
+  display: inline-block;
+  height: 40px;
+  margin: 0 2px;
+  width: 15.5%;
+}
+#mouth_top #teeth.chomp .tooth {
+  -webkit-animation: chomp 0.5s infinite;
+  -moz-animation: chomp 0.5s infinite;
+}
+
+/* PIGGYBOT - FORM
+-------------------------------------------------- */
+#form {
+  background:
+    url(../images/piggybot_mouth_top_shadow.png) repeat-x top left,
+    url(../images/piggybot_mouth_bottom_shadow.png) repeat-x bottom left;
+  background-color: #fff;
+  margin: -30px auto -51px auto;
+  padding: 20px 40px;
+  position: relative;
+  width: 846px;
+  z-index: 2;
+}
+#form h1 {
+  color: #194772;
+  font-size: 48px;
+  font-weight: normal;
+  padding-top: 30px;
+}
+#form form {
+  text-align: left;
+}
+#form label {
+  color: #616161;
+  display: block;
+  font-size: 1.4em;
+}
+#form input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 30px;
+  height: 50px;
+  margin: 10px 0 20px 0 ;
+  text-indent: 10px;
+  width: 100%;
+}
+#form button {
+  background: #8cc63f;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  height: 50px;
+  margin: 20px 5px 30px 5px;
+  min-width: 120px;
+}
+#form button:active {
+  background: #75a635;
+}
+
+/* PIGGYBOT - MOUTH (BOTTOM)
+-------------------------------------------------- */
+#mouth_bottom {
+  background: url(../images/piggybot_mouth_bottom.png);
+  height: 62px;
+  width: 928px;
+}
+
+/* FOOTER
+-------------------------------------------------- */
+footer {
+  line-height: 1.6;
+  margin: auto;
+  width: 1000px;
+  text-align: center;
+}
+
+.social {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.social a {
+  padding: 0 5px;
+}
+
+/* RESPONSIVE STYLES
+-------------------------------------------------- */
+@media only screen
+and (max-width : 400px) {
+  #form {
+    width: 92%;
+    margin: -2.6em auto -1em auto;
+    padding: 0.5em;
+    z-index: 2;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    text-align: center;
+  }
+  td {
+    margin: 0 auto;
+  }
+  footer {
+    width: 100%;
+  }
+  #form td input {
+    text-align: left;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  #wrapper {
+    width: 100%;
+  }
+  #form h1 {
+    font-size: 35px;
+  }
+  #form .date input{
+    width: 50%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+  #form label {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  #form input {
+    font-size: 1em;
+    margin-bottom: 0.8em;
+  }
+  #form .total {
+    font-size: 1em;
+  }
+  #form .amount {
+    font-size: 1em;
+  }
+  #head {
+    background: url(../images/piggybot_head.svg) no-repeat;
+    width: 93%;
+    background-size: cover;
+  }
+  #head #nose {
+    background-size: 60%;
+    margin: 0 auto 0 auto;
+    width: 22%;
+    display: block;
+    left: 0;
+  }
+  #teeth {
+    display: none;
+  }
+  #mouth_top {
+    width: 100%;
+    background: url(../images/piggybot_mouth_top.svg) no-repeat;
+  }
+  #mouth_bottom {
+    width: 100%;
+    background: url(../images/piggybot_mouth_bottom.svg) no-repeat;
+  }
+  #form button {
+    width: 40%;
+    font-size: 1em;
+    margin-top: 0;
+    margin-left: 0;
+
+  }
+  .background_image {
+    display: none;
+  }
+  .name {
+    float: none;
+  }
+}
+
+
+table .date { display: none; }
+#bonus-target table .date { display: table-cell; }
+
+#wrapper section { display: block; }
+
+td.money { width: 20%; }
+#form td input { text-align: right; padding-right: 10px; margin: 0; }
+td.date { width: 30%; }
+
+#form h1, #form h2 { margin-top: 0; }
+tfoot td {
+  color: #616161;
+  font-size: 30px;
+}
+
+#form div { text-align: left; }
+
+
+div.sent { display: none; }
+.success div.sent.success { display: block !important; }
+.fail div.sent.fail { display: block !important; }
+.email_sent div.unsent { display: none; }
+
+button[disabled] {
+  opacity: 0.5;
+}
+
+/* Hide Chrome date field arrows and calendar */
+
+input::-webkit-inner-spin-button,
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{
+    visibility: hidden !important;
+}

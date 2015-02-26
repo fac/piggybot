@@ -1,0 +1,137 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $base_colour_dark;
+  margin-top: 0;
+}
+h1 {
+	@include h1;
+	
+	.hero {
+	  margin: 0.25em auto 0.5em auto;
+	  text-align: center;
+	}
+}
+h2 {
+  margin: 1.5em 0 0.667em 0;
+	@include h2;
+}
+h3 {
+  margin-top: 0.296em;
+	@include h3;
+}
+h4 {
+	@include h4;
+}
+h5 {
+	@include h5;
+}
+h6 {
+	@include h6;
+}
+.section_heading {
+  border-bottom: 1px solid #D8DBDE;
+  display: inline-block;
+  margin-left: -2em;
+  padding-left: 2em;
+  padding-bottom: 0.25em;
+}
+h1.section_heading {
+  margin-left: -#{$root_unit*2/$h1}em;
+  padding-left: #{$root_unit*2/$h1}em;
+}
+h2.section_heading {
+  margin-left: -#{$root_unit*2/$h2}em;
+  padding-left: #{$root_unit*2/$h2}em;
+}
+h3.section_heading {
+  margin-left: -#{$root_unit*2/$h3}em;
+  padding-left: #{$root_unit*2/$h3}em;
+}
+h4.section_heading {
+  margin-left: -#{$root_unit*2/$h4}em;
+  padding-left: #{$root_unit*2/$h4}em;
+}
+h5.section_heading {
+  margin-left: -#{$root_unit*2/$h5}em;
+  padding-left: #{$root_unit*2/$h5}em;
+}
+h6.section_heading {
+  margin-left: -#{$root_unit*2/$h6}em;
+  padding-left: #{$root_unit*2/$h6}em;
+}
+.full_bleed .section_heading {
+  border: 0;
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.parent_heading {
+  margin-top: 0;
+}
+.heading_link {
+  color: $base_colour_dark;
+	
+	&:visited {
+	  color: $base_colour_dark;
+	}
+	&:hover,
+	&:focus {
+	  color: $base_colour;
+	}
+	&:after {
+	  content: "›";
+	  margin-left: 0.35em;
+	}
+}
+.subheading {
+  color: $base_text_colour;
+  display: block;
+  font-size: 50%;
+}
+h1 .subheading {
+  font-size: 0.5em; /* 18px */
+  font-weight: normal;
+  line-height: 1.333em; /* 24px */
+  margin-top: 0.25em;
+}
+h2 .subheading {
+  font-size: 0.583em; /* 14px */
+  line-height: 1.5em; /* 21px */
+  margin-top: 0.5em;
+}
+h3 .subheading {
+  font-size: 0.667em; /* 12px */
+  line-height: 1.5em; /* 18px */
+  margin-top: 0.5em;
+}
+.meta_detail,
+h2 .meta_detail,
+h3 .meta_detail,
+h4 .meta_detail,
+h5 .meta_detail,
+h6 .meta_detail {
+  color: #B2B6BE;
+  font-weight: 300;
+}
+h3 + .prettyprint,
+h4 + .prettyprint,
+h5 + .prettyprint,
+h6 + .prettyprint {
+  margin-top: -0.25em;
+}
+.prettyprint + h1,
+.prettyprint + h2,
+.prettyprint + h3,
+.prettyprint + h4,
+.prettyprint + h5,
+.prettyprint + h6 {
+  margin-top: 1em;
+}
+.heading_separated {
+  border-bottom: 1px solid #D8DBDE;
+  padding-bottom: 0.5em;
+}

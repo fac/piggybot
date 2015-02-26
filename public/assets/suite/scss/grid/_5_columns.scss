@@ -1,0 +1,20 @@
+.col_5 {
+	.column {
+	  margin-left: percentage(20px/960px);
+	}
+	.span1 {
+	  width: percentage(176px/960px);
+	}
+	.span2 {
+	  width: percentage(372px/960px);
+	}
+	.span3 {
+	  width: percentage(568px/960px);
+	}
+	.span4 {
+	  width: percentage(764px/960px);
+	}
+	.span5 {
+	  width: 100%;
+	}
+}

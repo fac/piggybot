@@ -1,0 +1,14 @@
+.supplementary {
+  @include restrained;
+}
+.centre {
+  text-align: center;
+}
+.note {
+  color: $light_70;
+}
+.leader {
+  color: $light_80;
+  font-weight: 300;
+  @include outspoken;
+}

@@ -1,0 +1,352 @@
+.blank_slate {
+  background: #ecf1f2;
+  color: #777;
+  line-height: 150%;
+  margin: 1.75em auto 1em auto; /* 52px 26px 13px 26px */
+  max-width: 1000px;
+  padding: 20px 30px 30px 30px;
+  position: relative;
+  @include border_radius(10px,10px,10px,10px);
+  @extend %clearfix;
+}
+form + #contents > .blank_slate {
+  margin-top: 3em;
+}
+.infobox_wrapper + .blank_slate {
+  margin-top: 4.385em;
+}
+.flexi-header + #contents .blank_slate {
+  margin-top: 2.75em;
+}
+.blank_slate p,
+.blank_slate li {
+  font-size: $em;
+}
+.blank_slate #slate_icon {
+  display: inline;
+  float: left;
+  height: 228px;
+  margin: -50px 0 10px -6px;
+  width: 176px;
+}
+.blank_slate h1,
+.blank_slate h2,
+.blank_slate h3,
+.blank_slate .description {
+  color: #354659;
+}
+.blank_slate h1 {
+  display: inline;
+  font-size: em(32,14);
+  font-weight: bold;
+  margin: 0 0 0.25em 0;
+  padding-right: 0.15em;
+}
+.blank_slate #definitions {
+  display: inline;
+  font-size: $em;
+  font-weight: bold;
+  line-height: 150%;
+}
+.blank_slate .pronunciation {
+  font-style: normal;
+  font-weight: normal;
+}
+.blank_slate strong {
+  font-weight: bold;
+}
+.blank_slate .pronunciation em,
+.blank_slate .pronunciation strong em {
+  font-style: italic;
+}
+.blank_slate .alternatives {
+  display: block;
+}
+.blank_slate .alternatives em {
+  font-family: Georgia,'Times New Roman',Times,serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.blank_slate .description {
+  background: #dae4e6;
+  border-top: 1px solid #ccc;
+  font-weight: bold;
+  line-height: 130%;
+  margin: 1.25em 0 2em 120px;
+  padding-top: 1.25em;
+  padding-right: 2em;
+  padding-left: 50px;
+  padding-bottom: 1.5em;
+}
+.blank_slate.white_labelled .description {
+  border-top: 0;
+  margin-top: 1em;
+  @include border_radius(6px,6px,6px,6px);
+}
+.blank_slate .description p {
+  font-size: em(18,14);
+  line-height: 130%;
+  margin: 0;
+  text-align: left;
+}
+.blank_slate .examples {
+  clear: both;
+  margin-bottom: 2em;
+}
+.blank_slate .example {
+  line-height: 150%;
+  list-style: none;
+  margin-bottom: 1.75em;
+  position: relative;
+}
+.blank_slate .example h3 {
+  font-size: em(16,14);
+  font-weight: bold;
+  left: 0;
+  line-height: 120%;
+  margin: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 150px;
+}
+.blank_slate.white_labelled .example h3 {
+  font-size: em(13,14);;
+  line-height: 120%;
+  margin: auto;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.blank_slate .example strong {
+  color: #666;
+}
+.blank_slate .learn_more {
+  display: block;
+  margin: 1em 0 0 0;
+}
+.blank_slate blockquote {
+  border-left: 4px solid #ccc;
+  margin: 0 0 1em 0;
+  padding: 1em 0 1em 2em;
+}
+.blank_slate blockquote p {
+  color: #666;
+  font-size: em(16,14);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.blank_slate .title,
+.blank_slate .example,
+.blank_slate #slate_action {
+  padding-left: 170px;
+}
+.blank_slate.white_labelled .title,
+.blank_slate.white_labelled .description,
+.blank_slate.white_labelled .example,
+.blank_slate.white_labelled #slate_action {
+  padding-left: 0;
+}
+.blank_slate.white_labelled .description {
+  padding-left: 2em;
+}
+.blank_slate.has_options {
+	background: #e2e8e9;
+	padding: 0;
+}
+.blank_slate.has_options h1 {
+	display: block;
+	font-size: em(24,14);
+}
+.blank_slate.has_options .subheading {
+	margin-bottom: 0;
+}
+.blank_slate .options {
+  margin: 2em 0;
+	position: relative;
+}
+.blank_slate .options .or {
+	background: #E2E8E9;
+	color: #fff;
+	font-size: em(36,14);
+	font-weight: 300;
+	height: 76px;
+	left: 50%;
+	line-height: 1em;
+	margin: -54px 0 0 -54px;
+	padding: 32px 0 0 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 108px;
+	z-index: 0;
+  @include border_radius(108px,108px,108px,108px);
+}
+.blank_slate .option {
+	background-color: #fff;
+  padding: 1.5em;
+	position: relative;
+  text-align: left;
+  width: 45%;
+	z-index: 1;
+  @include border_radius(4px,4px,4px,4px);
+  @include box_sizing;
+  @include box_shadow(0, 1px, 2px, rgba(0,0,0,0.12));
+}
+.blank_slate .option.primary {
+	float: left;
+}
+.blank_slate .option.secondary {
+	float: right;
+}
+.blank_slate .option .button {
+	padding: 0.65em 1em;
+}
+.blank_slate > .slate_content {
+	padding: 2em;
+  @include box_sizing;
+  @extend %clearfix;
+}
+.blank_slate > .primary {
+  background: url(/images/bg-arrow.png) no-repeat 0 1.25em #F0F3F4;
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+  float: right;
+  text-align: center;
+  width: 75%;
+}
+.blank_slate > .complementary {
+  float: left;
+  width: 25%;
+}
+.blank_slate > .complementary > h3 {
+  font-size: $em;
+	margin: 0.5em 0 1em 0;
+}
+.blank_slate > .complementary > .bank_name + h3 {
+	margin-top: 0;
+}
+.blank_slate > .complementary > h4 {
+	margin-bottom: 0;
+}
+.thumbnail_text.bank_name > .thumbnail_title {
+	margin-top: 0.15em;
+}
+#contacts_slate #slate_icon {
+  height: 196px;
+  margin-left: -15px;
+  margin-top: -40px;
+  width: 176px;
+}
+#invoices_slate #slate_icon {
+  height: 218px;
+}
+#estimates_slate #slate_icon {
+  height: 218px;
+}
+#bills_slate #slate_icon {
+  height: 218px;
+}
+#expenses_slate #slate_icon {
+  height: 164px;
+  margin-left: -18px;
+  margin-top: -40px;
+  width: 169px;
+}
+#projects_slate #slate_icon {
+  height: 218px;
+  margin-left: -27px;
+  margin-top: -48px;
+  width: 177px;
+}
+#timetracking_slate #slate_icon {
+  height: 187px;
+  margin-left: -29px;
+  margin-top: -40px;
+  width: 190px;
+}
+#statementofaccount_slate {
+  margin: 20px auto 10px auto;
+  padding: 20px;
+}
+#statementofaccount_slate .title,
+#statementofaccount_slate .example,
+#statementofaccount_slate #slate_action {
+  padding-left: 0;
+}
+#statementofaccount_slate .title {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+#statementofaccount_slate .description {
+  margin-left: 0;
+  padding-left: 2em;
+}
+#statementofaccount_slate h1 {
+  font-size: em(28,14);
+}
+#statementofaccount_slate #soa_fields {
+  background: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#pricelist_slate #slate_icon {
+  height: 183px;
+  margin-left: -4px;
+  margin-top: -39px;
+  width: 155px;
+}
+#pricelist_slate .description {
+  margin-left: 80px;
+  padding-left: 90px;
+}
+
+#income_spending_slate #slate_icon {
+  margin-top: -64px;
+}
+#income_spending_slate {
+  float: left;
+}
+#slate_action .button {
+  margin-right: 0.5em;
+}
+#income_spending_slate #slate_action .button {
+  clear: both;
+  margin-bottom: 0.5em;
+}
+#income_spending_slate .learn_more {
+  clear: both;
+}
+#gettingstarted_slate #slate_icon {
+  height: 204px;
+  margin: 0;
+  left: -20px;
+  position: absolute;
+  top: -20px;
+  width: 204px;
+}
+#gettingstarted_slate {
+  background: none;
+  margin: 0;
+}
+#gettingstarted_slate .title,
+#gettingstarted_slate .example,
+#gettingstarted_slate #slate_action {
+  padding-left: 0;
+}
+#gettingstarted_slate #slate_action .button {
+  font-size: em(18,14);
+  padding: 0.75em 0.75em;
+}
+#gettingstarted_slate .description {
+  border: 0;
+  margin: 0 0 1.5em 0;
+  padding-left: 2em;
+}
+#payroll_profile_slate #slate_icon {
+  height: 181px;
+  margin-top: -37px;
+}

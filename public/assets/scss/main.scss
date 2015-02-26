@@ -1,0 +1,89 @@
+// Import compass
+@import "compass";
+
+// Normalize for consistent cross-browser element rendering
+@import "../suite/scss/vendor/normalize";
+
+// Variables and mixins
+@import "../suite/scss/variables";
+@import "../suite/scss/mixins";
+
+// Global rules
+@import "../suite/scss/global/_global";
+
+// Typography
+@import "../suite/scss/typography/_base_elements";
+@import "../suite/scss/typography/_headings";
+@import "../suite/scss/typography/_links";
+@import "../suite/scss/typography/_common_classes";
+@import "../suite/scss/typography/_sizing_aids";
+@import "../suite/scss/typography/_colour_variants";
+
+// Modules
+@import "../suite/scss/modules/_tables";
+@import "../suite/scss/modules/_lists";
+@import "../suite/scss/modules/_images";
+@import "../suite/scss/modules/_buttons";
+@import "../suite/scss/modules/_social_actions";
+@import "../suite/scss/modules/_dropdowns";
+@import "../suite/scss/modules/_widgets";
+@import "../suite/scss/modules/_breadcrumbs";
+@import "../suite/scss/modules/_progress_bars";
+@import "../suite/scss/modules/_blank_slates";
+
+// Layout
+@import "../suite/scss/layout/_clearfix";
+@import "../suite/scss/layout/_hidden_elements";
+@import "../suite/scss/layout/_spacing_aids";
+@import "../suite/scss/layout/_contents_wrapper";
+@import "../suite/scss/layout/_navbar";
+@import "../suite/scss/layout/_main_content";
+@import "../suite/scss/layout/_meta_content";
+@import "../suite/scss/layout/_footer";
+@import "../suite/scss/layout/_subnav";
+@import "../suite/scss/layout/_masthead";
+
+// Forms
+@import "../suite/scss/forms/_inputs";
+@import "../suite/scss/forms/_labels";
+@import "../suite/scss/forms/_radios_checkboxes";
+@import "../suite/scss/forms/_selects";
+@import "../suite/scss/forms/_textareas";
+@import "../suite/scss/forms/_percentages";
+@import "../suite/scss/forms/_field_notes";
+@import "../suite/scss/forms/_fieldsets";
+@import "../suite/scss/forms/_lists";
+@import "../suite/scss/forms/_errors";
+@import "../suite/scss/forms/_date_picker";
+@import "../suite/scss/forms/_login_form";
+@import "../suite/scss/forms/_paired_inputs";
+@import "../suite/scss/forms/_placeholder";
+
+// Grid
+@import "../suite/scss/grid/_grid";
+@import "../suite/scss/grid/_7_columns";
+@import "../suite/scss/grid/_5_columns";
+
+// Alerts
+@import "../suite/scss/alerts/_infoboxes";
+
+// For testing only
+@import "../suite/scss/testing/_viewport_size";
+
+// Syntax highlighting
+@import "../suite/scss/vendor/syntax";
+
+// CSS Tooltips
+@import "../suite/scss/vendor/simptip";
+
+// Print
+@import "../suite/scss/print/_print";
+
+// Layouts
+@import "../suite/scss/layout/layouts/vertical_horizontal_centered";
+@import "../suite/scss/layout/layouts/landing_page_editorial";
+
+// Docs examples
+@import "../suite/scss/docs/_examples";
+
+// Import your project .scss files here

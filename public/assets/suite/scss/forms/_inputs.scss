@@ -1,0 +1,74 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+div.emailarea {
+  @extend %form_field;
+}
+.faux_input {
+  display: inline;
+  vertical-align: middle;
+  @extend %form_field;
+	
+	&.time input {
+	  width: 48px;
+	}
+	input {
+	  background: none;
+	  border: 0;
+	  padding: 0;
+	}
+}
+input[disabled="disabled"] {
+  @extend %form_field_disabled;
+}
+input[type="text"].readonly,
+input[type="password"].readonly,
+input[type="email"].readonly,
+input[type="number"].readonly,
+input[type="url"].readonly,
+div.emailarea.readonly,
+.faux_input.readonly {
+  @extend %form_field_read_only;
+}
+input[type="text"].auto_width,
+input[type="password"].auto_width,
+input[type="email"].auto_width,
+input[type="number"].auto_width,
+input[type="url"].auto_width,
+div.emailarea.auto_width,
+.faux_input.auto_width  {
+  @extend %form_field_auto_width;
+}
+.field {
+  margin-bottom: 1em;
+	@extend %clearfix;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.field.has_currency {
+  margin-left: -0.95em;
+	
+	> label {
+	  margin-left: 0.95em;
+	}
+}
+.field .unit {
+  display: inline-block;
+  width: 0.65em;
+}
+.adjacent {
+  float: left;
+	
+	&:first-child {
+	  margin-right: 1em;
+	}
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { /* Remove iOS spin control */
+  -webkit-appearance: none;
+  margin: 0;
+}

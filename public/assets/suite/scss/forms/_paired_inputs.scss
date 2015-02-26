@@ -1,0 +1,32 @@
+.paired_inputs {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"] {
+	  float: left;
+	  height: 18px;
+	  padding-bottom: 6px;
+	  padding-top: 6px;
+		@include border_radius(2px, 0, 2px, 0);
+	}
+	input[type="email"],
+	.email {
+	  width: 13em;
+	}
+	.button {
+	  border-left: 0;
+	  border-top: 1px solid #d4d4d4;
+	  float: left;
+	  font-size: 0.929em; /* 13px */
+	  margin-right: 0;
+	  height: 32px;
+	  padding: 6px 1em;
+		@include border_radius(0, 3px, 3px, 0);
+		@include box_shadow(0, 1px, 0, rgba(0,0,0,0.04));
+		
+		&:active {
+			top: 0;
+		}
+	}
+}

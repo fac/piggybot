@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>
+<style type="text/css">
+  @media only screen and (max-width: 600px){
+    /* 100% WIDTH */
+      body {max-width:600px !important;}
+      table[class=flexwidth] {width:100% !important;}
+      table[class=flexwidth_boxed] {width:100% !important;}
+      table[class=flexwidth_boxed_twocol] {width:100% !important;}
+    /* IMAGES: ALWAYS 100% WIDTH */
+      img[class=image_fullwidth_permanent] {max-width:100% !important; height:auto !important;}
+  }
+  @media only screen and (max-width: 600px) and (min-width: 500px){
+  }
+  @media only screen and (max-width: 500px){
+    /* LOGO REDUCTION */
+      img[class=logo] {width:120px !important; height:auto !important;}
+    /* HIDING */
+      table[class=hide] {display:none !important;}
+      img[class=hide] {display:none !important;}
+      span[class=hide] {display:none !important;}
+    /* INTRO AREA */
+      img[class=image_top_right_small] {margin-left:10px !important;}
+      img[class=image_top_right_cropped] {margin-top:0 !important; margin-right:-160px !important; margin-left:0 !important;}  /* ADJUST THESE VALUES TO SUIT */
+      table[id=clip] {overflow:hidden !important;}
+    /* IMAGES: SWITCHING TO 100% ON MOBILE */
+      img[class=image_fullwidth] {width:100% !important; height:auto !important;}
+      table[class=image_fullwidth_wrap] {width:100% !important; margin-top:0 !important;}
+      table[class=image_fullwidth_wrap] td {padding:0 0 12px 0 !important;}
+    /* BOXED, WITH INNER BOXES */
+      table[class=innerboxes] {border-spacing:20px 0 !important; margin:20px 0 0 0 !important;}
+      td[class=tablecellstack] {width:auto !important; display:block !important; padding:0 20px 20px 0 !important; margin:0 !important; text-align:left !important;}
+      td[class=innerboxes_cell] {width:100% !important; display:block !important; margin:0 0 20px 0 !important;}
+    /* BOXED, SEPARATED INTO TWO COLS */
+      table[class=flexwidth_boxed_twocol] td{display:block !important; width:100% !important;}
+      td[class=flexwidth_boxed_twocol_topcell] {margin-bottom:20px !important;}
+    /* SIDE PANEL */
+      table[class=sidepanel] {width:100% !important; display:block !important; margin:0 0 30px 0 !important; line-height:21px !important;}
+      table[class=sidepanel] p{padding:0 !important;}
+    /* FOOTER */
+      table[class=forceunder] {float:none !important; width:100% !important;}
+      div[class=sociallinks] {display:inline !important; float:left !important; width:33% !important; padding-bottom:0 !important;}
+      div[class=sociallinks] strong{display:block !important;}
+      img[class=lightbulb] {padding-left: 12px !important}
+  }
+</style>
+<!--[if gte mso 9]>
+<style>
+  .outlookbutton{padding:0 !important; border-top: 9px solid #92b737 !important; border-right: 7px solid #92b737 !important; border-bottom: 10px solid #92b737 !important; border-left: 7px solid #92b737 !important;}
+</style>
+<![endif]-->
+</head>
+
+<body topmargin="0" style="padding:0; margin:0; width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;" bgcolor="#fdebf0">
+
+<!--CLIP IMAGES AND PREVENT HORIZONTAL SCROLLBARS-->
+<table id="clip" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0;"><tr valign="top"><td style="padding:0; margin:0;" valign="top" bgcolor="#fdebf0">
+<!--CLIP IMAGES AND PREVENT HORIZONTAL SCROLLBARS-->
+
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0;" bgcolor="#ffffff">
+    <tr>
+      <td align="center" >
+        <!-- INTRO BLOCK -->
+        <table class="flexwidth" align="center" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="text-align:left; margin:0; padding:0;">
+          <tr>
+            <td style="padding:0; line-height: 26px; margin: 0; font-family:helvetica neue,helvetica,arial,sans-serif; font-size: 16px; color:#656e7d;" valign="middle" height="100%">
+              <img style="padding:0;margin:0;" src="http://freeagent-piggybot.herokuapp.com/piggybot_header1.png" width="95%">
+            </td>
+          </tr>
+        </table>
+        <!-- INTRO BLOCK ENDS -->
+      </td>
+    </tr>
+  </table>
+
+  <!-- NUMBERED SECTION BEGINS -->
+  <table class="flexwidth" align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="text-align:left; margin:0 auto; padding:0; line-height:26px; font-family:helvetica neue,helvetica,arial,sans-serif; font-size:14px; color:#656e7d;" >
+    <tr valign="top">
+      <td style="padding:20px 20px 0 20px; margin:0;" valign="top">
+        <p style="font-size:22px;line-height:30px;">Hey <%= params[:name].capitalize %>,</p>
+        <p style="font-size:22px;line-height:30px;">If you manage to save this much money every week, you will be able to afford your<b> <%= params[:item] %></b> in <%= params[:weeks] %> weeks!
+        </p>
+        <p style="font-size:22px;line-height:30px;">That's only <%= params[:sleeps] %> sleeps!</p>
+        <p style="font-size:22px;line-height:30px;"><b>Good luck from the Piggy Banker!</b></p>
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0;">
+    <tr>
+      <td align="center" >
+        <!-- INTRO BLOCK -->
+        <table class="flexwidth" align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="text-align:left; margin:0; padding:0;">
+          <tr>
+            <td width="40%"></td>
+            <td style="padding:20px 20px 20px 20px; line-height: 26px; margin: 0; font-family:helvetica neue,helvetica,arial,sans-serif; font-size: 16px; color:#656e7d;" valign="middle" height="100%">
+              <img src="http://freeagent-piggybot.herokuapp.com/piggy.gif" style="margin:0 auto;" width="100">
+            </td>
+            <td width="40%"></td>
+          </tr>
+        </table>
+        <!-- INTRO BLOCK ENDS -->
+      </td>
+    </tr>
+  </table>
+
+
+        <!-- Dark pink table (footer) begins -->
+<table bgcolor="#b37d8a" width="100%" align="center" style="border-top:1px solid #724d56;">
+  <tr>
+    <td>
+
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <tr>
+      <td height="12" ></td>
+    </tr>
+  </table>
+
+  <table class="flexwidth" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
+    <tr>
+      <td width="20"></td>
+      <td style="text-align: center; padding:15px 0 35px 0; font-family:helvetica neue,helvetica,arial,sans-serif; font-size:14px; color:#fff; line-height:16px;">
+        <p>Made down on the farm by</p>
+        <a href="http://www.freeagent.com/" title="FreeAgent: Accounting Software Simplified">
+          <img width="20%" src="http://freeagent-piggybot.herokuapp.com/freeagent-logo.png"/>
+        </a>
+      </td>
+      <td width="20"></td>
+    </tr>
+  </table>
+  <!-- dark pink table ends-->
+    </td>
+  </tr>
+</table>
+<!--CLIP IMAGES AND PREVENT HORIZONTAL SCROLLBARS-->
+</td></tr></table>
+<!--CLIP IMAGES AND PREVENT HORIZONTAL SCROLLBARS-->
+
+</body>
+</html>

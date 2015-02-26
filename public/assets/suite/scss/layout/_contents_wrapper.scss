@@ -1,0 +1,11 @@
+.contents {
+  margin: 0 auto;
+  padding: 0 1em;
+	@extend %clearfix;
+}
+.full_bleed .contents {
+  padding: 0 1em;
+}
+.measure {
+  max-width: 44em;
+}

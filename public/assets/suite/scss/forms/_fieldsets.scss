@@ -1,0 +1,43 @@
+fieldset {
+  background: $fieldset_bg;
+  border: 0;
+  color: $darker_text_colour;
+  margin: 1em 0 1.5em 0; /* 14px 0 21px 0 */
+  padding: 1.5em; /* 21px */
+  *zoom: 1;
+	@include border_radius(4px, 4px, 4px, 4px);
+	
+	&:before
+	&:after {
+	  content: " ";
+	  display: table;
+	}
+	&:after {
+	  clear: both;
+	}
+	.bare {
+	  background: none;
+	  padding: 0;
+		@include border_radius(0, 0, 0, 0);
+	}
+	> h2,
+	.required_note + h2 {
+	  margin-bottom: 1em;
+	  margin-top: 0;
+	}
+}
+.required_note {
+  @include restrained;
+  float: right;
+}
+legend {
+	font-size: em(18, 14);
+	line-height: em(27, 18);
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+fieldset input[disabled="disabled"],
+fieldset textarea[disabled="disabled"],
+fieldset select[disabled="disabled"] {
+  @extend %form_field_disabled_fieldset;
+}

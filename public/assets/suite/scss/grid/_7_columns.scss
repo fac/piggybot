@@ -1,0 +1,27 @@
+/* 7-column grid — based on a 960px grid with x7 120px columns and 20px gutters */
+.col_7 {
+	.column {
+	  margin-left: percentage(20px/960px);
+	}
+	.span1 {
+	  width: percentage(120px/960px);
+	}
+	.span2 {
+	  width: percentage(260px/960px);
+	}
+	.span3 {
+	  width: percentage(400px/960px);
+	}
+	.span4 {
+	  width: percentage(540px/960px);
+	}
+	.span5 {
+	  width: percentage(680px/960px);
+	}
+	.span6 {
+	  width: percentage(820px/960px);
+	}
+	.span7 {
+	  width: 100%;
+	}
+}

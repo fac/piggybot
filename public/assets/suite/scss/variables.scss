@@ -1,0 +1,173 @@
+// Base asset path
+$assetPath: "/assets";
+
+// Root typographic unit in pixels
+$root_unit: 14;
+
+// Convert root typographic unit to ems (based on 16px browser default)
+$base_font_size: #{$root_unit/16}em;
+
+// Calculate em size based on pixel target and context
+@function em($px, $context: $root_unit) {
+  @return #{$px/$context}em;
+}
+
+// Base line height and em value
+$base_line_height: 1.5em;
+$em: 1em;
+
+// Heading sizes and line heights
+$h1: 36;
+$h1_size: em($h1, 14);
+$h1_line_height: em(39, $h1);
+
+$h2: 24;
+$h2_size: em($h2, 14);
+$h2_line_height: em(24, $h2);
+
+$h3: 18;
+$h3_size: em($h3, 14);
+$h3_line_height: em(27, $h3);
+
+$h4: 16;
+$h4_size: em($h4, 14);
+$h4_line_height: em(24, $h4);
+
+$h5: 14;
+$h5_size: em($h5, 14);
+$h5_line_height: em(21, $h5);
+
+$h6: 12;
+$h6_size: em($h6, 14);
+$h6_line_height: em(15, $h6);
+
+
+
+// Default font stack
+$base_font_stack: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+// Helvetica Neue 35 Thin stack
+$helvetica_35_thin: "HelveticaNeueW01-Thin", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+// Monospace font stack
+$monospaced: "Monaco", "Courier New", Courier, monospace; 
+
+
+
+// Base colour: FreeAgent blue
+$base_colour: #007abf;
+
+// FreeAgent green
+$freeagent_green: #7cc04a;
+
+$white: rgb(255,255,255);
+$red: #ca131d;
+$green: #a2ca6d;
+$green_text: #649a23;
+$amber: #f28c00;
+$slate_grey: #cbcbcb;
+
+$positive_colour: #7CC04A;
+$positive_colour_opaque: lighten($positive_colour, 26);
+$positive_colour_text: #68B138;
+
+$active_colour: #FFB608;
+$active_colour_opaque: lighten($active_colour, 29);
+$active_colour_text: #FFA805;
+
+$warning_colour: #FD6A0F;
+$warning_colour_opaque: lighten($warning_colour, 30);
+$warning_colour_text: #F6520F;
+
+$negative_colour: #DE1F2F;
+$negative_colour_opaque: lighten($negative_colour, 37);
+$negative_colour_text: #DE1F2C;
+
+
+
+
+// Base dark colour
+$base_colour_dark: adjust-color($base_colour, $lightness: -16%, $saturation: -60%);
+
+// Base text colour
+$base_text_colour: adjust-color($base_colour, $saturation: -90%);
+
+// Darker text colour
+$darker_text_colour: adjust-color($base_colour, $lightness: -5%, $saturation: -90%);
+
+// Global background colour
+$global_bg: adjust-color($base_colour, $lightness: 55%, $saturation: -92%);
+$global_bg_darker: adjust-color($global_bg, $lightness: -8%);
+
+// Darkened header colour
+$darkened_header: adjust-color($base_colour, $lightness: -50%, $saturation: -50%);
+
+// Fieldset background
+$fieldset_bg: adjust-color($global_bg, $lightness: 3%);
+
+
+
+// Secondary colours
+$fa_light_blue: #53C1E4;
+.fa_light_blue {
+  background: $fa_light_blue;
+}
+$fa_dark_green: #176543;
+.fa_dark_green {
+  background: $fa_dark_green;
+}
+$fa_dark_blue: #194772;
+.fa_dark_blue {
+  background: $fa_dark_blue;
+}
+$fa_yellow: #FFB608;
+.fa_yellow {
+  background: $fa_yellow;
+}
+$fa_red: #DE1F2F;
+.fa_red {
+  background: $fa_red;
+}
+$fa_orange: #FE6B10;
+.fa_orange {
+  background: $fa_orange;
+}
+$fa_cyan: #00C2BE;
+.fa_cyan {
+  background: $fa_cyan;
+}
+$fa_pink: #DD377B;
+.fa_pink {
+  background: $fa_pink;
+}
+$fa_purple: #76368E;
+.fa_purple {
+  background: $fa_purple;
+}
+
+
+
+// Text colours lighter than base text colour
+$light_90: #747c8a; // Base colour at 90% opacity
+$light_80: #848b97; // 80%
+$light_70: #9399a4; // 70%
+$light_60: #a3a8b1; // 60%
+
+// Text colours darker than base text colour
+$dark_20: #515864; // Base colour + 20% black
+$dark_30: #474d57; // 30%
+$dark_40: #3d424b; // 40% 
+
+
+
+// Navbar
+$navbar_content_height: 1.5em;
+$navbar_link_padding_bottom: 1em;
+$navbar_link_padding_top: 1em;
+$navbar_height: $navbar_content_height + $navbar_link_padding_bottom + $navbar_link_padding_top;
+$navbar_link: adjust-color($base_colour, $lightness: 40%, $saturation: -90%);
+$navbar_active_link: #fff;
+$navbar_dropdown_link_padding: 0.5em 1em;
+
+// Media query values
+$full_navbar_width: 768px;

@@ -1,0 +1,13 @@
+#footer {
+  clear: both;
+  color: $light_70;
+  margin: 1em auto;
+  padding: 1em 0;
+  @include break(palm-large) {
+    text-align: left;
+  }
+	
+	.prominent {
+	  color: $base_text_colour;
+	}
+}

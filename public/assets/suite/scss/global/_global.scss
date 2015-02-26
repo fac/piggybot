@@ -1,0 +1,7 @@
+html {
+  background: $global_bg;
+}
+body {
+  color: $base_text_colour;
+	font: #{$base_font_size}/#{$base_line_height} $base_font_stack;
+}

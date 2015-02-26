@@ -1,0 +1,68 @@
+.social_action {
+  background-position: 0.75em center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+	line-height: 110%;
+  margin-bottom: 0.5em;
+  overflow: visible;
+  padding: 0.714em 1em 0.714em 2.25em;
+  text-align: center;
+  width: auto;
+	@include border_radius();
+	
+	&.inline {
+	  float: left;
+	  margin-bottom: 0;
+	  margin-right: 0.5em;
+	}
+	&.icon {
+	  background-position: center center;
+	  padding-left: 1.5em;
+	  padding-right: 1.5em;
+	  text-indent: -9999em;
+	}
+	&.twitter {
+	  background-color: #36aadf;
+	  background-image: image-url("suite/images/icons/twitter.svg");
+	  color: #fff;
+	}
+	&.facebook {
+	  background-color: #496499;
+	  background-image: image-url("suite/images/icons/facebook.svg");
+	  color: #fff;
+	}
+	&.gplus {
+	  background-color: #cd3c2a;
+	  background-image: image-url("suite/images/icons/gplus.svg");
+	  color: #fff;
+	}
+	&.mail {
+	  background-color: $base_text_colour;
+	  background-image: image-url("suite/images/icons/mail.svg");
+	  color: #fff;
+	}
+}
+.no_svg .social_action {
+	&.twitter {
+	  background-image: image-url("suite/images/icons/twitter.png");
+	}
+	&.facebook {
+	  background-image: image-url("suite/images/icons/facebook.png");
+	}
+	&.gplus {
+	  background-image: image-url("suite/images/icons/gplus.png");
+	}
+	&.mail {
+	  background-image: image-url("suite/images/icons/mail.png");
+	}
+}
+.social_actions.inline:last-child {
+  margin-right: 0;
+}
+.social_action.icon {
+  background-position: center center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-indent: -9999em;
+}

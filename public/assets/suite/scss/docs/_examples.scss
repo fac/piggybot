@@ -1,0 +1,86 @@
+.masthead.announce {
+  max-width: 44em;
+  margin: 5em auto;
+}
+.example_segment {
+  margin-bottom: 2em;
+}
+.example {
+  clear: both;
+  margin-bottom: 1em;
+	@extend %clearfix;
+}
+.example_segment .column,
+.example_segment .module {
+  background: $fieldset_bg;
+}
+
+.svg_bg_example {
+  background: image-url("suite/images/docs/freeagent_logo.svg") no-repeat 0 0;
+  height: 30px;
+  width: 149px;
+}
+.no_svg .svg_bg_example {
+  background: image-url("suite/images/docs/freeagent_logo.png");
+}
+.colour_swatch {
+	color: #fff;
+	display: block;
+	margin: 0 0 1em 0;
+	padding: 1em 2em;
+	text-align: center;
+  @include box_sizing(border-box);
+}
+.colour_swatch.half {
+  float: left;
+  margin-right: 5%;
+	text-align: left;
+  width: 47.50%;
+}
+.colour_swatch.half:nth-child(2n) {
+  margin-right: 0;
+}
+.colour_swatch > h4 {
+	color: #fff;
+}
+.colour_swatch > p {
+	margin-bottom: 0;
+}
+.colour_swatch.freeagent_blue {
+	background: $base_colour;
+}
+.colour_swatch.freeagent_green {
+	background: $freeagent_green;
+}
+.colour_swatch.base_dark {
+	background: $base_colour_dark;
+}
+.colour_swatch.base_text {
+	background: $base_text_colour;
+}
+.colour_swatch.darker_text {
+	background: $darker_text_colour;
+}
+.colour_swatch.global_background {
+	background: $global_bg;
+}
+.colour_swatch.global_background,
+.colour_swatch.global_background > h4 {
+	color: $base_text_colour;	
+}
+.colour_swatch.fieldset_background {
+	background: $fieldset_bg;
+}
+.colour_swatch.fieldset_background,
+.colour_swatch.fieldset_background > h4 {
+	color: $base_text_colour;	
+}
+.colour_swatch.positive {
+	background: $green;
+}
+.colour_swatch.negative {
+	background: $red;
+}
+.colour_swatch.warning {
+	background: $amber;
+}

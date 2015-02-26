@@ -1,0 +1,10 @@
+.percentage input[type="text"],
+.percentage input[type="number"],
+.percentage .faux_input {
+  width: 2em;
+}
+.percentage input[type="text"].auto_width,
+.percentage input[type="number"].auto_width,
+.percentage .faux_input.auto_width {
+  @extend %form_field_auto_width;
+}

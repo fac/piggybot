@@ -1,0 +1,72 @@
+.row {
+  margin-bottom: 2em;
+  width: 100%; /* 960px as fixed reference for 12 column grid */
+	@extend %clearfix;
+	
+	&.snug {
+	  margin-bottom: 0;
+	}
+	&:last-child {
+	  margin-bottom: 1em;
+	}
+	.column,
+	.module {
+	  float: left;
+	  margin: 0 0 0 2.5%; /* 24px */
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	h1,
+	h2,
+	h3 {
+	  padding-top: 0;
+	}
+}
+.column .example {
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* Default 12-column grid — based on a 960px grid with x12 58px columns and 24px gutters */
+.span1 {
+	width: percentage(58px/960px);
+}
+.span2 {
+  width: percentage(140px/960px);
+}
+.span3 {
+  width: percentage(222px/960px);
+}
+.span4 {
+  width: percentage(304px/960px);
+}
+.span5 {
+  width: percentage(386px/960px);
+}
+.span6 {
+  width: percentage(468px/960px);
+}
+.span7 {
+  width: percentage(550px/960px);
+}
+.span8 {
+  width: percentage(632px/960px);
+}
+.span9 {
+  width: percentage(714px/960px);
+}
+.span10 {
+  width: percentage(796px/960px); 
+}
+.span11 {
+  width: percentage(878px/960px);
+}
+.span12 {
+  width: 100%;
+}
+
+.column.quarter {
+  width: 23.125%;
+}

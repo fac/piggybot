@@ -1,0 +1,16 @@
+textarea {
+  vertical-align: baseline;
+  @extend %form_field;
+}
+.no_resize {
+  resize: none;
+}
+textarea.readonly {
+  @extend %form_field_read_only;
+}
+textarea.auto_width {
+  @extend %form_field_auto_width;
+}
+textarea[disabled="disabled"] {
+  @extend %form_field_disabled;
+}

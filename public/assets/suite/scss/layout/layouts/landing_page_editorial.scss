@@ -1,0 +1,367 @@
+.landing_editorial img {
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+.landing_editorial .secondary {
+  display: none;
+}
+.landing_editorial .vital_numbers dt {
+  color: $base_colour_dark;
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0 0 0.25em 0;
+}
+.landing_editorial .vital_numbers dd {
+  line-height: 1.333em;
+  margin: 0 0 1em 0;
+}
+.landing_editorial .contents {
+  margin: 0 auto;
+  max-width: 90em;
+}
+.landing_editorial .screenshot {
+	@include box_shadow(0, 1px, 2px, rgba(0,0,0,0.25));
+}
+.landing_editorial .centered {
+  text-align: center;
+}
+.landing_editorial .masthead {
+  position: relative;
+}
+.landing_editorial .masthead .hero_image {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.landing_editorial .masthead .logo {
+  display: inline;
+  max-width: 120px;
+}
+.landing_editorial .masthead + .contents.hero {
+  margin: -1em auto 2em auto;
+  position: relative;
+}
+.landing_editorial .hero_content {
+  margin: 0 auto;
+  max-width: 22em;
+  text-align: center;
+}
+.landing_editorial .masthead .hero_content h1 {
+  font-size: 2em;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin-bottom: 0.444em;
+  padding: 0;
+}
+.landing_editorial .contents section {
+  margin-bottom: 3em;
+}
+.landing_editorial .contents section.flush {
+  margin-bottom: 0;
+}
+.landing_editorial .contents section h2 {
+  margin: 0 0 0.5em 0;
+}
+.landing_editorial .profile {
+  background: $global_bg;
+  position: relative;
+}
+.landing_editorial .profile blockquote {
+  background: $global_bg;
+  border-left: 0;
+  display: block;
+  font-size: 1.143em; /* 16px */
+  margin-top: -5em;
+  padding: 1.35em 2.25em 1.25em 2.25em;
+  position: relative;
+}
+.landing_editorial .profile blockquote:before {
+  color: #D1D3D8;
+  content: "â€œ";
+  font-size: 3em; /* 54px */
+  left: 0.2em;
+  position: absolute;
+  top: 0.67em;
+}
+.landing_editorial .profile .citation {
+  color: #A8ACB6;
+}
+.landing_editorial .feature {
+  clear: both;
+}
+.landing_editorial .feature_content br {
+  display: none;
+}
+.landing_editorial .resolution {
+  border-top: 1px solid #D8DBDE;
+  padding: 1em 0;
+}
+.landing_editorial .resolution .span6 {
+  margin-top: 3em;
+}
+.landing_editorial .resolution .span6 .feature_content {
+  margin: 0 auto;
+  max-width: 28em;
+}
+.landing_editorial #footer {
+  text-align: center;
+}
+.landing_editorial #footer .supplementary {
+  display: inline-block;
+}
+
+/* Lifted from screen.css to provide styling on smaller viewports than normally required */
+.landing_editorial .separated li {
+  display: block;
+  float: left;
+  margin: 0 0.571em 0 0; /* 8px */
+}
+
+.landing_editorial .separated li:after {
+  content: " Â·";
+  word-spacing: 0.296em;
+}
+.landing_editorial .separated li:last-child:after {
+  content: "";
+}
+
+@media only screen and (min-width: 400px) {
+  .landing_editorial .profile blockquote {
+    font-size: 1.286em; /* 18px */
+    line-height: 145%;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .landing_editorial .profile blockquote {
+    bottom: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .landing_editorial .contents section {
+    margin-bottom: 5em;
+  }
+  .landing_editorial .contents section h2 {
+    margin-bottom: 0.75em;
+  }
+  .landing_editorial .contents.hero {
+    text-shadow: 0 0 3px rgba(0,0,0,0.20);
+    right: 0;
+    max-width: 22em;
+    position: absolute;
+    top: 29%;
+    width: 50%;
+  }
+  .landing_editorial .contents.hero.sarah {
+    right: 47%;
+    top: 22%;
+  }
+  .landing_editorial .contents.hero .hero_heading {
+    color: #fff;
+    font: 100 2.75em/90% $helvetica_35_thin; /* 56px */
+    letter-spacing: -0.02em;
+    margin: 0.2em 0 0.35em 0;
+    text-shadow: 0 0 2px rgba(0,0,0,0.18);
+  }
+  .landing_editorial .contents.hero.sarah .hero_heading {
+    font-size: 2.5em;
+  }
+  .landing_editorial .masthead .hero_image {
+    margin-bottom: 0;
+  }
+  .landing_editorial .hero_content,
+  .landing_editorial .hero_content h1 {
+    color: #fff;
+  }
+  .landing_editorial .hero_content {
+    max-width: 100%;
+  }
+  .landing_editorial .resolution {
+    padding-top: 3em;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .landing_editorial blockquote {
+    line-height: 1.444em; /* 26px */
+  }
+  .landing_editorial .secondary {
+    display: block;
+    text-align: left;
+  }
+  .landing_editorial .primary {
+    text-align: right;
+  }
+  .landing_editorial .vital_numbers dd {
+    font-size: 0.857em;
+  }
+  .landing_editorial .contents {
+    width: 90%;
+  }
+  .landing_editorial .contents.hero {
+    max-width: 28em;
+    right: 0;
+    top: 30%;
+  }
+  .landing_editorial .contents.hero.sarah {
+    max-width: 28em;
+    right: 49%;
+    top: 25%;
+  }
+  .landing_editorial .masthead {
+    margin-bottom: 0;
+  }
+
+  .landing_editorial .profile {
+    float: right;
+    width: 38.2291667%; /* 367px */
+  }
+  .landing_editorial .profile blockquote {
+    background: none;
+    font-size: 1em; /* 14px */
+    margin-top: 0;
+    padding-top: 1.75em;
+    position: relative;
+    width: auto;
+  }
+  .landing_editorial .feature {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 2em;
+  }
+  .landing_editorial .lead {
+    background: #fff;
+    border-top: 3px solid #7cc04a;
+    float: left;
+    margin-top: -3em;
+    padding: 2.25em 4.375%; /* 42px */
+    position: relative;
+    width: 53.0208333%; /* 593px width - 84px padding */
+  }
+  .landing_editorial .feature_content br {
+    display: block;
+  }
+  .landing_editorial .feature_image {
+    float: right;
+    margin-left: 3em;
+  }
+  .landing_editorial .feature.alt .feature_image {
+    float: left;
+    margin-right: 3em;
+  }
+  .landing_editorial .feature.split .written {
+    float: left;
+    width: 47.5%;
+  }
+  .landing_editorial .feature.split.alt .written {
+    float: right;
+  }
+  .landing_editorial .feature.split .feature_image {
+    margin-left: 5%;
+    width: 47.5%;
+  }
+  .landing_editorial .feature.split.alt .feature_image {
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  .landing_editorial .resolution .span6 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .landing_editorial .vital_numbers dt {
+    font-size: 1.714em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .landing_editorial .contents.hero {
+    top: 42%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .landing_editorial .contents.hero {
+    top: 48%;
+  }
+  .landing_editorial .contents.hero .hero_heading {
+    font-size: 3.5em;
+  }
+  .landing_editorial .contents.hero.sarah .hero_heading {
+    font-size: 3em;
+  }
+  .landing_editorial .hero_content p {
+    font-size: 1.143em; /* 16px */
+  }
+  .landing_editorial .feature {
+    padding-left: 3em;
+  }
+  .landing_editorial .vital_numbers dd {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .landing_editorial .masthead {
+    margin-bottom: 0;
+  }
+  .landing_editorial .feature_content {
+    font-size: 1.143em; /* 16px */
+    line-height: 1.65em; /* 28px */
+    margin-bottom: 2em;
+  }
+  .landing_editorial .contents.hero {
+    right: 2%;
+    top: 50%;
+    max-width: 34em;
+  }
+  .landing_editorial .contents.hero.sarah {
+    max-width: 34em;
+  }
+  .landing_editorial .contents.hero .hero_heading {
+    font-size: 4em;
+  }
+  .landing_editorial .hero_content p {
+    font-size: 1.286em; /* 18px */
+  }
+  .landing_editorial .hero_content .button {
+    font-size: 1.143em; /* 16px */
+  }
+  .landing_editorial .profile blockquote {
+    font-size: 1.286em; /* 18px */
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .landing_editorial .contents.hero {
+    max-width: 34em;
+  }
+  .landing_editorial .contents.hero.sarah {
+    max-width: 34em;
+    right: 52%;
+  }
+  .landing_editorial .hero_content {
+    font-size: 110%;
+  }
+  .landing_editorial .hero_content p {
+    line-height: 140%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .landing_editorial .contents.hero {
+    max-width: 38em;
+  }
+  .landing_editorial .contents.hero.sarah {
+    max-width: 38em;
+    top: 30%;
+  }
+  .landing_editorial .hero_content {
+    font-size: 120%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .landing_editorial .contents.hero {
+    right: 5%;
+  }
+}

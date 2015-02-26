@@ -1,0 +1,12 @@
+.field_note {
+  display: block;
+  @include restrained;
+  margin: 0.25em 0;
+}
+fieldset .field_note {
+  color: $base_text_colour;
+}
+.error_message {
+  color: #990000;
+  font-weight: bold;
+}

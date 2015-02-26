@@ -1,0 +1,26 @@
+select {
+  padding: 4px;
+  @extend %form_field;
+}
+optgroup {
+  font-family: $base_font_stack;
+  font-size: $base_font_size;
+}
+optgroup[label] {
+  font-weight: bold;
+}
+optgroup option {
+  padding-left: 1em;
+}
+select + select {
+  margin-left: 0px
+}
+select.readonly {
+  @extend %form_field_read_only;
+}
+select.auto_width {
+  @extend %form_field_auto_width;
+}
+select[disabled="disabled"] {
+  @extend %form_field_disabled;
+}

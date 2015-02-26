@@ -1,0 +1,105 @@
+.dropdown {
+	list-style: none;
+}
+.dropdown_toggle {
+	color: $navbar_active_link;
+	font-weight: bold;
+}
+.dropdown_menu {
+	padding-left: 0;
+	
+	li {
+		list-style: none;
+	}
+	a {
+		display: block;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+	}
+}
+@include break(palm-large) {
+	.dropdown {
+		position: relative;
+	}
+  .dropdown_toggle {
+  	color: $navbar_link;
+  	font-weight: normal;
+  }
+	.dropdown_menu {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  z-index: 1000;
+	  display: none;
+	  float: left;
+	  min-width: 160px;
+	  margin: 2px 0 0;
+	  list-style: none;
+	  background-color: #ffffff;
+	  border: 1px solid #cccccc;
+	  border: 1px solid rgba(0, 0, 0, 0.15);
+	  border-radius: 4px;
+	  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	  background-clip: padding-box;
+		
+		> li {
+			margin: 0;
+			
+			> a {
+				color: $base_colour;
+			  display: block;
+			  padding: $navbar_dropdown_link_padding;
+			  clear: both;
+			  white-space: nowrap;
+			}
+			> a:hover,
+			> a:focus {
+			  background-color: $base_colour;
+			  color: $navbar_active_link;
+			  text-decoration: none;
+			}
+			&:last-child > a {
+				@include border_radius(0, 0, 2px, 2px)
+			}
+		}
+		> .active > a,
+		> .active > a:hover,
+		> .active > a:focus {
+		  color: #fff;
+		  text-decoration: none;
+		  background-color: $base_colour_dark;
+		  outline: 0;
+		}
+		> .disabled > a,
+		> .disabled > a:hover,
+		> .disabled > a:focus {
+		  color: $light_70;
+		}
+		> .disabled > a:hover,
+		> .disabled > a:focus {
+		  cursor: not-allowed;
+		  background-color: none;
+		  text-decoration: none;
+		}
+	}
+	.open {
+		> .dropdown_menu {
+			display: block;
+		}
+		> a {
+		  outline: 0;
+		}
+	}
+	.caret {
+	  display: inline-block;
+	  width: 0;
+	  height: 0;
+	  margin-left: 2px;
+	  vertical-align: middle;
+	  border-top: 4px solid $navbar_link;
+	  border-right: 4px solid transparent;
+	  border-left: 4px solid transparent;
+	  content: "";
+	}
+}
