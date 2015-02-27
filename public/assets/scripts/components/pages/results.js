@@ -61,7 +61,7 @@ var ResultsPage = React.createBackboneClass({
     var results;
     if(data.negativeCashflow) {
       results = <div>
-        <p>Oh no. It looks like you’re spending more money than your saving. At this rate you’ll literally never be able to save up for that {data.targetName}.</p>
+        <p>Oh no. It looks like you’re spending more money than you're saving. At this rate you’ll literally never be able to save up for that {data.targetName}.</p>
         <p>Why not <a href="http://vzaar.com/videos/1517779">take a look at our helpful video on saving money</a>, which will help you get back on track.</p>
         <button role="step" onClick={this.startAgain}>Start Again</button>
       </div>
